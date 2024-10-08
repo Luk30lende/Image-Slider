@@ -1,7 +1,6 @@
 //step 1: get DOM
 let nextDom = document.getElementById("next");
 let prevDom = document.getElementById("prev");
-
 let carouselDom = document.querySelector(".carousel");
 let SliderDom = carouselDom.querySelector(".carousel .list");
 let thumbnailDom = document.querySelector(".carousel .thumbnail");
@@ -19,10 +18,13 @@ nextDom.onclick = function () {
 prevDom.onclick = function () {
   showSlider("prev");
 };
+
 let runTimeOut;
+
 let runNextAuto = setTimeout(() => {
   next.click();
 }, timeAutoNext);
+
 function showSlider(type) {
   let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
   let thumbnailItemsDom = document.querySelectorAll(
